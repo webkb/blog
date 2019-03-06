@@ -1,0 +1,10 @@
+==== Mysql Query Error
+---- 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+---- Query: SELECT * FROM warm_page WHERE cid=0 ORDER BY type DESC, createtime DESC LIMIT -10,10
+---- 2019-03-07 05:40:46
+
+==== Mysql Query Error
+---- 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1
+---- Query: SELECT * FROM warm_page WHERE cid=0 ORDER BY type DESC, createtime DESC LIMIT -10,10
+---- 2019-03-07 05:40:55
+
