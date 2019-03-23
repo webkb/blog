@@ -1,14 +1,8 @@
-a.link {
+a {
   text-decoration: none;
 }
 a.link:hover {
-  text-decoration: underline;
-}
-a.btn {
-  text-decoration: none;
-}
-a.btn:hover {
-  text-decoration: none;
+  border-bottom: 1px solid #515151;
 }
 .bfc {
   overflow: hidden;
@@ -42,6 +36,7 @@ input.block {
 .pagebar {
   font-size: 12px;
   padding: 28px 0;
+  font-family: 'Simsun';
 }
 .pagebar a,
 .pagebar span {
@@ -65,14 +60,12 @@ input.block {
 }
 body {
   margin: 0;
-  font-size: .875rem;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "";
-}
-.wrapper {
-  height: 100%;
+  font-size: 14px;
+  font-family: Tahoma;
 }
 .layout {
-  width: 1120px;
+  max-width: 1120px;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,17 +73,20 @@ body {
   padding: 0 10px;
 }
 .header {
-  width: 1120px;
+  max-width: 1120px;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 .main {
-  width: 1120px;
+  max-width: 1120px;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 .footer {
-  width: 1120px;
+  max-width: 1120px;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -125,7 +121,6 @@ a {
   border-top: 1px solid #e5e5e5;
 }
 .list li {
-
   padding: 0 10px;
   height: 39px;
   line-height: 39px;
@@ -215,39 +210,30 @@ a {
  * Login Page
  *
  **/
-.login {
+.loginwrapper {
   background: #1BAAD7 url(http://127.0.0.1/f/blog/static/bg.jpg) no-repeat no-repeat;
   background-size: cover;
 }
-.login_outer {
+.login {
   margin: 100px auto;
   padding: 20px 50px;
   width: 400px;
-  font-size: 14px;
   background: rgba(255, 255, 255, 0.3);
 }
-.errorMsgDiv {
-  margin: 0 auto;
-  height: 30px;
-  line-height: 30px;
-  font-size: 12px;
+.loginnotice {
+  height: 74px;
+  overflow: hidden;
 }
-.errorMsg {
-  padding: 0 12px ;
+.loginnotice h1 {
+  transition: margin-top 0.3s ease-out;
+}
+.loginnotice h1.submitStatus {
+  margin-top: -37px;
+}
+.loginnotice div.errorStatus {
+  padding: 12px 12px;
   color: #ffffff;
   background: rgba(240, 37, 65, 0.6);
-}
-.errorMsg.loginStatus {
-  color: rgba(255, 255, 255, 0);
-  background: rgba(240, 37, 65, 0);
-  -webkit-transition: color 5s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-.login_outer h1 {
-  -webkit-transition: margin-top 0.2s ease-out, margin-bottom 0.2s ease-out;
-}
-.login_outer h1.loginStatus {
-  margin-top: 0em;
-  margin-bottom: 1.34em;
 }
 .loginform input {
   width: 374px;
@@ -260,12 +246,12 @@ a {
   border-right: none;
   border: 1px solid rgba(177, 177, 177, 0.1);
   background: rgba(255, 255, 255, 0.4);
-  -webkit-transition: border-color 0.5s ease-out, background-color 0.51s ease-out;
+  transition: border-color 0.5s ease-out, background-color 0.51s ease-out;
 }
 .loginform input:focus {
   outline: none;
 }
-.loginform .username input:focus {
+.loginform .inputbox input:focus {
   border: 1px solid rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.6);
 }
@@ -273,7 +259,7 @@ a {
 .loginform input:-webkit-autofill:hover,
 .loginform input:-webkit-autofill:focus,
 .loginform input:-webkit-autofill:active {
-  -webkit-transition: color 1s ease-out, background-color 100s ease-out;
+  transition: color 1s ease-out, background-color 100s ease-out;
 }
 .loginform input[type="submit"] {
   box-sizing: content-box;

@@ -23,7 +23,7 @@ require './setting.php';
 <html>
 <head>
 <meta charset="utf-8" />
-<title><?php echo navbar($navbar_id);?>Networm</title>
+<title><?php echo navbar($navbar_id); ?>Networm</title>
 <link rel="stylesheet/less" href="static/style.less" />
 <script src="static/less.min.js"></script>
 </head>
@@ -63,7 +63,7 @@ foreach ($list as $key => $value) {
 	$title = $value->title;
 	$createtime = $value->createtime;
 	echo <<<html
-			<li class="bfc"><a class="link" href="list.php?id=$id">$imgtype $title</a> <span class="right">$createtime</span></li>
+			<li class="bfc">$imgtype <a class="link" href="list.php?id=$id">$title</a> <span class="right">$createtime</span></li>
 
 html;
 }

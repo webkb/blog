@@ -119,15 +119,15 @@ function login()
 		if ($setting = getDBusername($username)) {
 			if ($setting->password == md5($setting->salt . $password)) {
 				loginSet($setting, $password);
-				return json_encode(array('status' => 'success', 'content' => $lang['login_success'], ));
+				return json_encode(array('success' => true, 'msg' => $lang['login_success'], ));
 			} else {
-				return json_encode(array('status' => 'error', 'content' => $lang['password_is_error'], ));
+				return json_encode(array('error' => true, 'msg' => $lang['password_is_error'], ));
 			}
 		} else {
-			return json_encode(array('status' => 'error', 'content' => $lang['username_is_error'], ));
+			return json_encode(array('error' => true, 'msg' => $lang['username_is_error'], ));
 		}
 	} else {
-		return json_encode(array('status' => 'error', 'content' => $lang['input_is_error'], ));
+		return json_encode(array('error' => true, 'msg' => $lang['input_is_error'], ));
 	}
 }
 /**
