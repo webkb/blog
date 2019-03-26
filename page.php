@@ -37,7 +37,7 @@ require './setting.php';
 	</div>
 	<div class="main" style="background: #ecdfcf;color:#333;font-family:FangSong;font-size:32px;line-height:1.8">
 		<h1 style="margin: 2rem;"><?php echo $page->title; ?></h1>
-		<div style="margin: 2rem;"><?php echo $page->content; ?></div>
+		<div class="article" style="margin: 2rem;"><?php echo $page->content; ?></div>
 	</div>
 </div>
 <script src="static/common.js"></script>

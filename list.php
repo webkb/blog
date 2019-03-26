@@ -63,7 +63,7 @@ foreach ($list as $key => $value) {
 	$title = $value->title;
 	$createtime = $value->createtime;
 	echo <<<html
-			<li class="bfc">$imgtype <a class="link" href="list.php?id=$id">$title</a> <span class="right">$createtime</span></li>
+			<li class="bfc">$imgtype <a href="list.php?id=$id">$title</a> <span class="right">$createtime</span></li>
 
 html;
 }

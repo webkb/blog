@@ -1,6 +1,6 @@
 <?php
 define('ROOT', __DIR__);
-require ROOT . '/../include/setting.php';
+require ROOT . '/../../include/setting.php';
 require ROOT . '/function.php';
 
 
