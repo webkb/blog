@@ -6,7 +6,7 @@ require './setting.php';
 		$id = $_GET['id'];
 		$page = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 		if (empty($page)){
-			backreferer('ID不存在');
+			backreferer('找不到对应的文章');
 		}
 		$gallery = explode(';',$page->gallery);
 		$cid = $page->cid;
@@ -87,6 +87,10 @@ require './setting.php';
 			<div class="picture">
 			<h3></h3>
 				<label for="pagetype" >列表<input name="type" type="hidden" value="<?php if (isset($page->type) && $page->type == 1): ?>1<?php else: ?>0<?php endif ?>" /><input type="checkbox" id="pagetype" <?php if (isset($page->type) && $page->type == 1): ?>checked=""<?php endif ?> onclick="this.previousElementSibling.value=this.previousElementSibling.value==1?0:1" /></label>
+				IMG
+				<input name="img" value="<?php if (isset($page->img)){echo $page->img;}?>" />
+				URL
+				<input name="url" value="<?php if (isset($page->url)){echo $page->url;}?>" />
 			</div>
 		</form>
 	</div>

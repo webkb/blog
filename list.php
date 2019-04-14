@@ -4,7 +4,7 @@ require './setting.php';
 		$id = $_GET['id'];
 		$page = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 		if (empty($page)){
-			backreferer('ID不存在');
+			backreferer('找不到对应的文章');
 		}
 		if ($page->type==0){
 			jump("write.php?id=$id");

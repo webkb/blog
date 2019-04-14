@@ -36,7 +36,7 @@ function getPostData() {
 	$filed=array(
 		'id',
 		'title','content',
-		'img','intro','gallery',
+		'img','intro','gallery','url',
 		'page_title','page_kw','page_ds',
 		'cid',
 		'pid',

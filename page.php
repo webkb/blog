@@ -4,7 +4,7 @@ require './setting.php';
 		$id = $_GET['id'];
 		$page = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 		if (empty($page)){
-			backreferer('ID不存在');
+			backreferer('找不到对应的文章');
 		}
 		$gallery = explode(';',$page->gallery);
 		$cid = $page->cid;
@@ -12,7 +12,7 @@ require './setting.php';
 		$navbar_id = $id;
 		$post = mysql_select("SELECT * FROM warm_post WHERE id=$id");
 	} else {
-		backreferer('ID不存在');
+		backreferer('找不到对应的文章');
 	}
 ?>
 <!doctype html>
