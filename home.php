@@ -19,7 +19,7 @@ $page=mysql_getrow('SELECT * FROM warm_setting');
 				<a class="btn logo" href="index.php">Networm</a>
 			</div>
 			<div class="act right">
-				<a class="btn" href="javascript:editor.sync();document.forms[0].submit()">保存</a>
+				<a class="btn" href="javascript:document.forms[0].submit()">保存</a>
 			</div>
 		</div>
 	</div>
@@ -37,7 +37,7 @@ $page=mysql_getrow('SELECT * FROM warm_setting');
 				传真
 				<input name="fax" value="<?php if (isset($page->fax)) echo $page->fax; ?>" />
 				邮编
-				<input name="zip" value="<?php if (isset($page->zip)) echo $page->zip; ?>" />
+				<input name="postcode" value="<?php if (isset($page->postcode)) echo $page->postcode; ?>" />
 				邮箱
 				<input name="mail" value="<?php if (isset($page->mail)) echo $page->mail; ?>" />
 				联系人

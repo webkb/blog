@@ -41,7 +41,7 @@ function getPostData() {
 		'cid',
 		'pid',
 		'type',
-		'company','address','tel','fax','zip','mail','contact','mobile','username'
+		'company','address','tel','fax','postcode','mail','contact','mobile','username'
 	);
 	$data = array();
 	if (! empty($_POST)) {//print_r($_POST);exit;
