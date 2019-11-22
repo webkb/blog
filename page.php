@@ -19,7 +19,7 @@ require './setting.php';
 <html>
 <head>
 <meta charset="utf-8" />
-<title><?php echo $page_title; ?>Networm</title>
+<title><?php echo $page_title; ?> Networm</title>
 <link rel="stylesheet/less" href="static/style.less" />
 <script src="static/less.min.js"></script>
 </head>
@@ -35,7 +35,7 @@ require './setting.php';
 			</div>
 		</div>
 	</div>
-	<div class="main" style="background: #ecdfcf;color:#333;font-family:FangSong;font-size:32px;line-height:1.8">
+	<div class="main" style="background: #ecdfcf;color:#333;font-family:FangSong;font-size:32px;line-height:1.8;min-height:500px;">
 		<h1 style="margin: 2rem;"><?php echo $page->title; ?></h1>
 		<div class="article" style="margin: 2rem;"><?php echo $page->content; ?></div>
 	</div>
