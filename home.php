@@ -55,22 +55,10 @@ $page=mysql_getrow('SELECT * FROM warm_setting');
 		</form>
 	</div>
 	<div class="footer-wrapper">
-		<div class="footer" style="padding-left:10px;">
+		<div class="footer">
 			<span>© 2019 Networm v0.1</span>
 		</div>
 	</div>
-<script>
-	var h = innerHeight-81+'px';
-	var m = document.getElementById('main');
-	var mleft = document.getElementById('mleft');
-	m.style.minHeight=h;
-	mleft.style.minHeight=h;
-onresize=function(){
-	var h = innerHeight-81+'px';
-	m.style.minHeight=h;
-	mleft.style.minHeight=h;
-}
-</script>
 </div>
 </body>
 </html>

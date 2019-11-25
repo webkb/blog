@@ -1,28 +1,16 @@
 <?php
 require './setting.php';
-	$action = isset($_GET['action']) ? $_GET['action'] : '';
-	
+
 	if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0) {
 		$id = $_GET['id'];
 		$page = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 		if (empty($page)){
 			backreferer('找不到对应的文章');
 		}
-		$gallery = explode(';',$page->gallery);
+		$gallery = explode(';', $page->gallery);
 		$cid = $page->cid;
 		$page_title = '编辑 ' . $page->title;
 		$navbar_id = $id;
-	} elseif (isset($_GET['post_id']) && is_numeric($_GET['post_id']) && $_GET['id'] > 0) {
-		$post_id = $_GET['post_id'];
-		$page = mysql_getrow("SELECT * FROM warm_post WHERE post_id=$post_id");
-		if (empty($page)){
-			jump('list.php');
-		}
-		$id = $page->id;
-		$gallery = explode(';',$page->gallery);
-		$cid = $page->cid;
-		$page_title = '编辑 ' . $page->title;
-		$navbar_id = $cid;
 	} else {
 		if (isset($_GET['cid']) && is_numeric($_GET['cid']) && $_GET['cid'] > 0) {
 			$cid = $_GET['cid'];
@@ -65,6 +53,7 @@ require './setting.php';
 				<a class="btn" href="page.php?id=<?php echo $id; ?>" target="_blank">察看</a>
 				<a class="btn" href="del.php?id=<?php echo $id; ?>">删除</a>
 <?php endif; ?>
+
 			</div>
 		</div>
 	</div>
@@ -72,8 +61,8 @@ require './setting.php';
 		<form class="editform bfc" name="post" action="save.php" method="post" enctype="multipart/form-data">
 <?php if (isset($cid)): ?>
 			<input type="hidden" name="cid" value="<?php echo $cid;?>" />
-<?php echo "\r\n"; endif; ?>
- <?php if (isset($id)): ?>
+<?php endif; ?>
+<?php if (isset($id)): ?>
 			<input type="hidden" name="id" value="<?php echo $id;?>" />
 <?php endif; ?>
 			<div class="title_content">

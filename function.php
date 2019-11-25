@@ -15,7 +15,7 @@ function islogin() {
 	return stripos($_SERVER['PHP_SELF'], 'login.php');
 }
 
-function navbar($id = 0, $navbar = ''){
+function navbar($id = 0, $navbar = '') {
 	if (! $id) return $navbar;
 	$row = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 	if ($row->type) {
@@ -23,7 +23,7 @@ function navbar($id = 0, $navbar = ''){
 	}
 	return navbar($row->cid, $navbar);
 }
-function navbar_url($id = 0, $navbar = ''){
+function navbar_url($id = 0, $navbar = '') {
 	if (! $id) return $navbar;
 	$row = mysql_getrow("SELECT * FROM warm_page WHERE id=$id");
 	if ($row->type) {

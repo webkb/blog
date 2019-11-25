@@ -29,7 +29,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'login') {
 			<label>
 				<div class="bfc">
 					<span>帐号</span>
-					<span class="right forget_password"><a class="link" href="reg.php">注册</a></span>
+					<span class="right forget_password"><a class="link" href="reg.php"></a></span>
 				</div>
 				<input class="f2" placeholder="" name="username" tabindex="1" />
 			</label>
