@@ -5,7 +5,7 @@ require ROOT . '/../../include/setting.php';
 require ROOT . '/function.php';
 
 
-define('WEB_ROOT', '/f/gbbs');
-define('EDITOR_P', '/f/kindeditortest');
+define('WEB_ROOT', '/f/blog');
+define('EDITOR_P', '/f/kindeditor');
 adminLoginCheck();
 ?>
