@@ -1,6 +1,6 @@
 <?php
 define('ROOT', __DIR__);
-define('LINK_PRODUCTION', true);
+define('DB_ONLINE', true);
 require ROOT . '/../../include/setting.php';
 require ROOT . '/function.php';
 
