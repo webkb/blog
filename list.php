@@ -24,8 +24,7 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo navbar($navbar_id); ?>Networm</title>
-<link rel="stylesheet/less" href="static/style.less" />
-<script src="static/less.min.js"></script>
+<link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
 <div class="wrapper">

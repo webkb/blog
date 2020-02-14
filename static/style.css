@@ -206,13 +206,13 @@ a {
 .pagewrapper {
   background: #734a12;
 }
+
 /**
  * Login Page
  *
  **/
 .loginwrapper {
-  background: #1BAAD7 url(http://127.0.0.1/f/blog/static/bg.jpg) no-repeat no-repeat;
-  background-size: cover;
+  background: #1baad7;
 }
 .login {
   margin: 100px auto;
@@ -241,25 +241,13 @@ a {
   margin-bottom: 15px;
   padding: 12px 12px;
   border-radius: 2px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   border: 1px solid rgba(177, 177, 177, 0.1);
   background: rgba(255, 255, 255, 0.4);
-  transition: border-color 0.5s ease-out, background-color 0.51s ease-out;
 }
 .loginform input:focus {
-  outline: none;
-}
-.loginform .inputbox input:focus {
   border: 1px solid rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.6);
-}
-.loginform input:-webkit-autofill,
-.loginform input:-webkit-autofill:hover,
-.loginform input:-webkit-autofill:focus,
-.loginform input:-webkit-autofill:active {
-  transition: color 1s ease-out, background-color 100s ease-out;
+  outline: none;
 }
 .loginform input[type="submit"] {
   box-sizing: content-box;
@@ -270,4 +258,10 @@ a {
 }
 .loginform input[type="submit"]:focus {
   background: rgba(47, 171, 65, 0.9);
+}
+.loginform input:-webkit-autofill,
+.loginform input:-webkit-autofill:hover,
+.loginform input:-webkit-autofill:focus,
+.loginform input:-webkit-autofill:active {
+  transition: color 1s ease-out, background-color 100s ease-out;
 }

@@ -26,8 +26,7 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo $page_title; ?> Networm</title>
-<link rel="stylesheet/less" href="static/style.css" />
-<script src="static/less.min.js"></script>
+<link rel="stylesheet" href="static/style.css" />
 		<link rel="stylesheet" href="<?php echo EDITOR_P; ?>/themes/default/default.css" />
 		<script charset="utf-8" src="<?php echo EDITOR_P; ?>/kindeditor-all-min.js"></script>
 		<script charset="utf-8" src="<?php echo EDITOR_P; ?>/lang/zh-CN.js"></script>

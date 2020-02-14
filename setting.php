@@ -1,7 +1,7 @@
 <?php
 define('ROOT', __DIR__);
 define('DB_ONLINE', true);
-require ROOT . '/../../include/setting.php';
+require ROOT . '/../include/setting.php';
 require ROOT . '/function.php';
 
 
