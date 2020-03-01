@@ -26,10 +26,10 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo $page_title; ?> Networm</title>
-<link rel="stylesheet" href="static/style.css" />
-		<link rel="stylesheet" href="<?php echo EDITOR_P; ?>/themes/default/default.css" />
-		<script charset="utf-8" src="<?php echo EDITOR_P; ?>/kindeditor-all-min.js"></script>
-		<script charset="utf-8" src="<?php echo EDITOR_P; ?>/lang/zh-CN.js"></script>
+<link rel="stylesheet" href="<?php echo $_APP_STATIC; ?>/style.css" />
+		<link rel="stylesheet" href="<?php echo $_APP_EDITOR; ?>/themes/default/default.css" />
+		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/kindeditor-all-min.js"></script>
+		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/lang/zh-CN.js"></script>
 		<script>
 			var editor;
 			KindEditor.ready(function(K) {

@@ -5,7 +5,11 @@ require ROOT . '/../include/setting.php';
 require ROOT . '/function.php';
 
 
-define('WEB_ROOT', '/f/blog');
-define('EDITOR_P', '/f/kindeditor');
+$_APP_NAME = 'cms';
+$_APP_URL = $_SERVER['CONTEXT_PREFIX'] . '/' . $_APP_NAME;
+$_APP_EDITOR = $_SERVER['CONTEXT_PREFIX'] . '/' . 'kindeditor';
+$_APP_STATIC = $_APP_URL . '/' . 'static';
+
+
 adminLoginCheck();
 ?>
