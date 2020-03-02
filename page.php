@@ -20,6 +20,7 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo $page_title; ?> Networm</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet/less" href="static/style.less" />
 <script src="static/less.min.js"></script>
 </head>

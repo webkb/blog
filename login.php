@@ -15,6 +15,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'login') {
 <head>
 <meta charset="utf-8" />
 <title>登录 Networm</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="static/style.css" />
 <script src="static/common.js"></script>
 </head>

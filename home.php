@@ -7,6 +7,7 @@ $page=mysql_getrow('SELECT * FROM warm_setting');
 <head>
 <meta charset="utf-8" />
 <title>设置 Networm</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="static/style.css" />
 </head>
 	

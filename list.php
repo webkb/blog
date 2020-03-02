@@ -24,6 +24,7 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo navbar($navbar_id); ?>Networm</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
@@ -38,7 +39,6 @@ require './setting.php';
 				<a class="btn" href="write.php?cid=<?php echo $id; ?>">新建</a>
 				<a class="btn" href="home.php">设置</a>
 	<?php if (LOGIN_ID): ?>
-				<span class=""><?php echo LOGIN_USERNAME; ?></span>
 				<a class="btn" href="logout.php">退出</a>
 	<?php else: ?>
 				<a class="btn" href="login.php">登录</a>

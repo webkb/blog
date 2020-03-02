@@ -26,6 +26,7 @@ require './setting.php';
 <head>
 <meta charset="utf-8" />
 <title><?php echo $page_title; ?> Networm</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php echo $_APP_STATIC; ?>/style.css" />
 		<link rel="stylesheet" href="<?php echo $_APP_EDITOR; ?>/themes/default/default.css" />
 		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/kindeditor-all-min.js"></script>
