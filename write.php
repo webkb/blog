@@ -30,7 +30,7 @@ require './setting.php';
 <link rel="stylesheet" href="<?php echo $_APP_STATIC; ?>/style.css" />
 		<link rel="stylesheet" href="<?php echo $_APP_EDITOR; ?>/themes/default/default.css" />
 		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/kindeditor-all-min.js"></script>
-		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/lang/zh-CN.js"></script>
+		<script charset="utf-8" src="<?php echo $_APP_EDITOR; ?>/lang/zh_CN.js"></script>
 		<script>
 			var editor;
 			KindEditor.ready(function(K) {
@@ -41,7 +41,6 @@ require './setting.php';
 		</script>
 </head>
 <body>
-<div class="wrapper">
 	<div class="header-wrapper">
 		<div class="header bfc">
 			<div class="nav left">
@@ -57,33 +56,34 @@ require './setting.php';
 			</div>
 		</div>
 	</div>
-	<div class="main">
-		<form class="editform bfc" name="post" action="save.php" method="post" enctype="multipart/form-data">
+	<div class="main-wrapper">
+		<div class="main">
+			<form class="editform bfc" name="post" action="save.php" method="post" enctype="multipart/form-data">
 <?php if (isset($cid)): ?>
-			<input type="hidden" name="cid" value="<?php echo $cid;?>" />
+				<input type="hidden" name="cid" value="<?php echo $cid;?>" />
 <?php endif; ?>
 <?php if (isset($id)): ?>
-			<input type="hidden" name="id" value="<?php echo $id;?>" />
+				<input type="hidden" name="id" value="<?php echo $id;?>" />
 <?php endif; ?>
-			<div class="title_content">
-			<h3></h3>
-				标题
-				<input name="title" value="<?php if (isset($page->title)){echo $page->title;}?>" />
-				内容
-				<textarea name="content" ><?php if (isset($page->title)){echo $page->content;} ?></textarea>
-				<input class="editsubmit" type="submit" value="保存" />
-			</div>
-			<div class="picture">
-			<h3></h3>
-				<label for="pagetype" >列表<input name="type" type="hidden" value="<?php if (isset($page->type) && $page->type == 1): ?>1<?php else: ?>0<?php endif ?>" /><input type="checkbox" id="pagetype" <?php if (isset($page->type) && $page->type == 1): ?>checked=""<?php endif ?> onclick="this.previousElementSibling.value=this.previousElementSibling.value==1?0:1" /></label>
-				IMG
-				<input name="img" value="<?php if (isset($page->img)){echo $page->img;}?>" />
-				URL
-				<input name="url" value="<?php if (isset($page->url)){echo $page->url;}?>" />
-			</div>
-		</form>
+				<div class="title_content">
+				<h3></h3>
+					标题
+					<input name="title" value="<?php if (isset($page->title)){echo $page->title;}?>" />
+					内容
+					<textarea name="content" ><?php if (isset($page->title)){echo $page->content;} ?></textarea>
+					<input class="editsubmit" type="submit" value="保存" />
+				</div>
+				<div class="picture">
+				<h3></h3>
+					<label for="pagetype" >列表<input name="type" type="hidden" value="<?php if (isset($page->type) && $page->type == 1): ?>1<?php else: ?>0<?php endif ?>" /><input type="checkbox" id="pagetype" <?php if (isset($page->type) && $page->type == 1): ?>checked=""<?php endif ?> onclick="this.previousElementSibling.value=this.previousElementSibling.value==1?0:1" /></label>
+					IMG
+					<input name="img" value="<?php if (isset($page->img)){echo $page->img;}?>" />
+					URL
+					<input name="url" value="<?php if (isset($page->url)){echo $page->url;}?>" />
+				</div>
+			</form>
+		</div>
 	</div>
-</div>
 <script src="static/common.js"></script>
 </body>
 </html>

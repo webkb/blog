@@ -28,7 +28,6 @@ require './setting.php';
 <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
-<div class="wrapper">
 	<div class="header-wrapper">
 		<div class="header bfc">
 			<div class="nav left">
@@ -52,9 +51,10 @@ require './setting.php';
 			</div>
 		</div>
 	</div>
-	<div class="main">
+	<div class="main-wrapper">
+		<div class="main">
 <?php if (! empty($list)): ?>
-		<ul class="reset list">
+			<ul class="reset list">
 <?php
 foreach ($list as $key => $value) {
 	$imgtype = $value->type ? '&#x1f4c1;' : '&#x1f4c4;';
@@ -62,17 +62,17 @@ foreach ($list as $key => $value) {
 	$title = $value->title;
 	$createtime = $value->createtime;
 	echo <<<html
-			<li class="bfc">$imgtype <a href="list.php?id=$id">$title</a> <span class="right">$createtime</span></li>
+				<li class="bfc"><a href="list.php?id=$id">$title</a> <span class="right">$createtime</span></li>
 
 html;
 }
 ?>
-		</ul>
+			</ul>
 <?php pagebar(); ?>
 <?php else: ?>
-		<p class="empty_list">还没有内容，<a class="link" href="write.php?cid=<?php echo $id; ?>">新建一个</a></p>
+			<p class="empty_list">还没有内容，<a class="link" href="write.php?cid=<?php echo $id; ?>">新建一个</a></p>
 <?php endif; ?>
+		</div>
 	</div>
-</div>
 </body>
 </html>
